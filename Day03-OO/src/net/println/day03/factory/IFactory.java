@@ -5,6 +5,9 @@ package net.println.day03.factory;
  */
 public interface IFactory {
 
-    IProduct createObject();
+    public static final int PRODUCT_TYPE_1 = 1;
+    public static final int PRODUCT_TYPE_2 = 2;
+
+    IProduct createObject(int type);
 
 }

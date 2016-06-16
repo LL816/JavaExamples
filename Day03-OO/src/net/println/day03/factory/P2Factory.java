@@ -5,7 +5,7 @@ package net.println.day03.factory;
  */
 public class P2Factory implements IFactory {
     @Override
-    public IProduct createObject() {
+    public IProduct createObject(int type) {
         return new ProductImpl2();
     }
 }

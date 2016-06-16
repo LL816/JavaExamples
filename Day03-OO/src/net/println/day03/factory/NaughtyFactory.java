@@ -5,7 +5,7 @@ package net.println.day03.factory;
  */
 public class NaughtyFactory implements IFactory {
     @Override
-    public IProduct createObject() {
+    public IProduct createObject(int type) {
         return null;
     }
 }

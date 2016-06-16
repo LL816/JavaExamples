@@ -10,7 +10,7 @@ public class CachedFactory implements IFactory {
     ArrayList<IProduct> products = new ArrayList<>(5);
 
     @Override
-    public IProduct createObject() {
+    public IProduct createObject(int type) {
         IProduct product = new ProductImpl();
         products.add(product);
         return product;

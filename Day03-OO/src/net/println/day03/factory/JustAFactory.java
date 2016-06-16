@@ -5,7 +5,21 @@ package net.println.day03.factory;
  */
 public class JustAFactory implements IFactory {
     @Override
-    public IProduct createObject() {
-        return new ProductImpl();
+    public IProduct createObject(int type) {
+        IProduct product;
+        switch (type){
+            case PRODUCT_TYPE_1:{
+                product = new ProductImpl();
+            }
+            break;
+            case PRODUCT_TYPE_2:{
+                product = new ProductImpl2();
+            }
+            break;
+            default:{
+                throw new IllegalArgumentException("Not support type: " + type);
+            }
+        }
+        return product;
     }
 }

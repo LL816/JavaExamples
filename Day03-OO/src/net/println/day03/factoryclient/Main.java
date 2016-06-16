@@ -12,8 +12,8 @@ public class Main {
     static IFactory factory = new SingleFactory();
 
     public static void main(String... args) {
-        IProduct product = factory.createObject();
-        IProduct product1 = factory.createObject();
+        IProduct product = factory.createObject(IFactory.PRODUCT_TYPE_1);
+        IProduct product1 = factory.createObject(IFactory.PRODUCT_TYPE_2);
         //...
         System.out.println(product);
         System.out.println(product1);
